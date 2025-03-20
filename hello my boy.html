@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<!-- This is the DOCTYPE declaration for an HTML5 document -->
+<html lang="en">
+<!-- The <html> element represents the root of an HTML document -->
+<head>
+    <!-- The <head> element contains meta-information about the document -->
+    <meta charset="UTF-8">
+    <!-- The charset attribute specifies the character encoding for the HTML document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The viewport meta tag ensures the page is responsive on all devices -->
+    <title>AI & ML IV Semester Timetable</title>
+    <!-- The title of the HTML document, displayed in the browser's title bar or tab -->
+    <style>
+        /* CSS styles for the HTML document */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            /* Background color for the body */
+        }
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px 0;
+            background-color: #34495e;
+            color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            /* Box shadow for the container */
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.2em;
+            /* Font size for the heading */
+        }
+        #dateTime {
+            font-size: 1.5em;
+            margin-top: 10px;
+            /* Margin top for the dateTime element */
+        }
+        table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: separate;
+            border-spacing: 0;
+            border: 1px solid #444;
+            background-color: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            /* Box shadow for the table */
+        }
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #444;
+            font-size: 1em;
+            /* Font size for table headers and data cells */
+        }
+        .heading {
+            background-color: #3c8dbc;
+            color: white;
+            font-size: 1.8em;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+            vertical-align: middle;
+            height: 60px;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+            /* Border radius for the top corners of the heading */
+        }
+        th {
+            background-color: #3c8dbc;
+            color: white;
+            text-transform: uppercase;
+            /* Uppercase text for table headers */
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+            /* Background color for even rows */
+        }
+        .lunch{
+            background:#FFD700;
+            color: #8B0000;
+            font-weight: bold;
+            font-size: 1.8em;
+            letter-spacing: 2px;
+            border: none;
+            /* No border for the lunch class */
+        }
+        .lunchhighlight {
+            background: linear-gradient(90deg, yellow, orange, red );
+            color: #8B0000;
+            font-weight: bold;
+            font-size: 1.8em;
+            letter-spacing: 2px;
+            border: none;
+            /* No border for the lunchhighlight class */
+        }
+        .break-text {
+            color: #8B0000;
+            font-weight: bold;
+            font-size: 1em;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            /* No borders for the break-text class */
+        }                    
+        .lab { 
+            background-color: #b3e0ff; 
+            color: #034f84; 
+            font-weight: bold; 
+            /* Bold font for the lab class */
+        }
+        .skill { 
+            background-color: #d6f5d6; 
+            color: #2e8b57; 
+            /* Color for the skill class */
+        }
+        .python { 
+            background-color: #ffb3ba; 
+            color: #8b0000; 
+            /* Color for the python class */
+        }
+        .math { 
+            background-color: #ffdd99; 
+            color: #a0522d; 
+            /* Color for the math class */
+        }
+        .visual { 
+            background-color: #c2f0fc; 
+            color: #007399; 
+            /* Color for the visual class */
+        }
+        .hardware { 
+            background-color: #c1e1c5; 
+            color: #2c5d63; 
+            /* Color for the hardware class */
+        }
+        .dbms { 
+            background-color: #ffd9b3; 
+            color: #804000; 
+            /* Color for the dbms class */
+        }
+        .lecturers {
+            margin-top: 20px;
+            font-size: 1em;
+            border-collapse: separate;
+            border-spacing: 0;
+            border: 1px solid #444;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /* Box shadow for the lecturers table */
+        }
+        .lecturers th {
+            background-color: #2c3e50;
+            color: white;
+            font-weight: bold;
+            border: none;
+            /* No border for the lecturers table headers */
+        }
+        .lecturers td {
+            border: 1px solid #ccc;
+            /* Border color for the lecturers table data cells */
+        }
+        .highlight {
+            background-color: #ff5733 !important;
+            color: white !important;
+            animation: glow 1s infinite alternate;
+            /* Animation for the highlight class */
+        }
+        .lecturer-highlight {
+            background-color: #ffda79 !important;
+            /* Background color for the lecturer-highlight class */
+        }
+        .enjoy-highlight {
+            background-color: #ffda79 !important;
+            animation: glow 1s infinite alternate;
+            /* Animation for the enjoy-highlight class */
+        }
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 10px #ff5733;
+                /* Starting box shadow for the glow animation */
+            }
+            to {
+                box-shadow: 0 0 20px #ff5733;
+                /* Ending box shadow for the glow animation */
+            }
+        }
+    </style>
+</head>
+<!-- The <head> element ends here -->
+<body>
+    <!-- The <body> element contains the content of the HTML document -->
+    <div class="container">
+        <!-- Container div for the heading and dateTime -->
+        <h1>AI & ML IV Semester Timetable</h1>
+        <!-- Main heading for the timetable -->
+        <p id="dateTime"></p>
+        <!-- Paragraph element for displaying the current date and time -->
+    </div>
+    <!-- Table for displaying the timetable -->
+    <table>
+        <tr>
+            <td class="heading" colspan="8">AI & ML IV Semester Timetable</td>
+            <!-- Heading row for the timetable with colspan of 8 -->
+        </tr>
+        <tr>
+            <th>Day</th>
+            <!-- Table header for the day column -->
+            <th>9:30-11:00</th>
+            <!-- Table header for the 9:30-11:00 time slot -->
+            <th>11:00-11:45</th>
+            <!-- Table header for the 11:00-11:45 time slot -->
+            <th>11:45-12:30</th>
+            <!-- Table header for the 11:45-12:30 time slot -->
+            <th>12:30-1:15</th>
+            <!-- Table header for the 12:30-1:15 time slot -->
+            <th>1:15-1:45</th>
+            <!-- Table header for the 1:15-1:45 time slot -->
+            <th>1:45-3:15</th>
+            <!-- Table header for the 1:45-3:15 time slot -->
+            <th>3:15-4:00</th>
+            <!-- Table header for the 3:15-4:00 time slot -->
+        </tr>
+        <tr>
+            <td>Monday</td>
+            <!-- Table data for Monday -->
+            <td class="visual mclass1">Data Visualization (LR)</td>
+            <!-- Table data for the 9:30-11:00 slot with class visual and mclass1 -->
+            <td class="math mclass2 mclass3" colspan="2">Advanced Engineering Mathematics (DSN)</td>
+            <!-- Table data for the 11:00-12:30 slot with class math, mclass2, and mclass3 -->
+            <td class="python mclass4">Python Programming for AI (KMA)</td>
+            <!-- Table data for the 12:30-1:15 slot with class python and mclass4 -->
+            <td class="lunch">L</td>
+            <!-- Table data for the lunch slot with class lunch -->
+            <td class="dbms mclass5 mclass6">Relational Database Management Systems (AB)</td>
+            <!-- Table data for the 1:45-3:15 slot with class dbms, mclass5, and mclass6 -->
+            <td class="skill mclass7">Skill Upgradation (LR)</td>
+            <!-- Table data for the 3:15-4:00 slot with class skill and mclass7 -->
+        </tr>
+        <tr>
+            <td>Tuesday</td>
+            <!-- Table data for Tuesday -->
+            <td class="python tuclass1">Python Programming for AI (KMA)</td>
+            <!-- Table data for the 9:30-11:00 slot with class python and tuclass1 -->
+            <td class="dbms tuclass2">Relational Database Management Systems (AB)</td>
+            <!-- Table data for the 11:00-11:45 slot with class dbms and tuclass2 -->
+            <td class="math tuclass3">Advanced Engineering Mathematics (DSN)</td>
+            <!-- Table data for the 11:45-12:30 slot with class math and tuclass3 -->
+            <td class="visual tuclass4">Data Visualization (LR)</td>
+            <!-- Table data for the 12:30-1:15 slot with class visual and tuclass4 -->
+            <td class="lunch">U</td>
+            <!-- Table data for the lunch slot with class lunch and content U -->
+            <td class="lab tuclass5 tuclass6 tuclass7" colspan="2">Relational Database Management Systems Lab (AB)</td>
+            <!-- Table data for the 1:45-4:00 slot with class lab, tuclass5, tuclass6, and tuclass7 -->
+        </tr>
+        <tr>
+            <td>Wednesday</td>
+            <!-- Table data for Wednesday -->
+            <td class="dbms wclass1">Relational Database Management Systems (AB)</td>
+            <!-- Table data for the 9:30-11:00 slot with class dbms and wclass1 -->
+            <td class="hardware wclass2">Computer Hardware and Networking (BP)</td>
+            <!-- Table data for the 11:00-11:45 slot with class hardware and wclass2 -->
+            <td class="visual wclass3 wclass4" colspan="2">Data Visualization (LR)</td>
+            <!-- Table data for the 11:45-1:15 slot with class visual, wclass3, and wclass4 -->
+            <td class="lunch">N</td>
+            <!-- Table data for the lunch slot with class lunch and content N -->
+            <td class="lab wclass5 wclass6 wclass7" colspan="2">Python Programming for AI Lab (KMA)</td>
+            <!-- Table data for the 1:45-4:00 slot with class lab, wclass5, wclass6, and wclass7 -->
+        </tr>
+        <tr>
+            <td>Thursday</td>
+            <!-- Table data for Thursday -->
+            <td class="hardware thclass1">Computer Hardware and Networking (BP)</td>
+            <!-- Table data for the 9:30-11:00 slot with class hardware and thclass1 -->
+            <td class="python thclass2 thclass3" colspan="2">Python Programming for AI (KMA)</td>
+            <!-- Table data for the 11:00-12:30 slot with class python, thclass2, and thclass3 -->
+            <td class="skill thclass4">Skill Upgradation (KMA)</td>
+            <!-- Table data for the 12:30-1:15 slot with class skill and thclass4 -->
+            <td class="lunch">C</td>
+            <!-- Table data for the lunch slot with class lunch and content C -->
+            <td class="lab thclass5 thclass6 thclass7" colspan="2">Computer Hardware and Networking Lab (BP)</td>
+            <!-- Table data for the 1:45-4:00 slot with class lab, thclass5, thclass6, and thclass7 -->
+        </tr>
+        <tr>
+            <td>Friday</td>
+            <!-- Table data for Friday -->
+            <td class="math fclass1">Advanced Engineering Mathematics (DSN)</td>
+            <!-- Table data for the 9:30-11:00 slot with class math and fclass1 -->
+            <td class="skill fclass2 fclass3" colspan="2">Skill Upgradation (LR)</td>
+            <!-- Table data for the 11:00-12:30 slot with class skill, fclass2, and fclass3 -->
+            <td class="skill fclass4">Skill Upgradation (BP)</td>
+            <!-- Table data for the 12:30-1:15 slot with class skill and fclass4 -->
+            <td class="lunch">H</td>
+            <!-- Table data for the lunch slot with class lunch and content H -->
+            <td class="lab fclass5 fclass6 fclass7" colspan="2">Data Visualization Lab (LR)</td>
+            <!-- Table data for the 1:45-4:00 slot with class lab, fclass5, fclass6, and fclass7 -->
+        </tr>
+        <tr>
+            <td>Saturday</td>
+            <!-- Table data for Saturday -->
+            <td class="hardware sclass1">Computer Hardware and Networking (BP)</td>
+            <!-- Table data for the 9:30-11:00 slot with class hardware and sclass1 -->
+            <td class="skill sclass2 sclass3 sclass4" colspan="3">Skill Upgradation (AB)</td>
+            <!-- Table data for the 11:00-1:15 slot with class skill, sclass2, sclass3, and sclass4 -->
+            <td class=" lunch break-text">BREAK</td>
+            <!-- Table data for the lunch slot with class lunch and content BREAK -->
+            <td class="lab sclass5 sclass6 sclass7" colspan="2">Employability Skills Lab (VR)</td>
+            <!-- Table data for the 1:45-4:00 slot with class lab, sclass5, sclass6, and sclass7 -->
+        </tr>
+    </table>
+    <!-- Table for displaying the lecturers -->
+    <table class="lecturers">
+        <tr>
+            <th>Abbreviation</th>
+            <!-- Table header for the abbreviation column -->
+            <th>Name</th>
+            <!-- Table header for the name column -->
+        </tr>
+        <tr class="AB">
+            <td>AB</td>
+            <!-- Table data for the abbreviation AB -->
+            <td>ASHEERA BEGUM</td>
+            <!-- Table data for the name ASHEERA BEGUM -->
+        </tr>
+        <tr class="BP">
+            <td>BP</td>
+            <!-- Table data for the abbreviation BP -->
+            <td>B PUSHYAMI</td>
+            <!-- Table data for the name B PUSHYAMI -->
+        </tr>
+        <tr class="DSN">
+            <td>DSN</td>
+            <!-- Table data for the abbreviation DSN -->
+            <td>D SATYANANDAM</td>
+            <!-- Table data for the name D SATYANANDAM -->
+        </tr>
+        <tr class="KMA">
+            <td>KMA</td>
+            <!-- Table data for the abbreviation KMA -->
+            <td>KM ARAVIND KUMAR</td>
+            <!-- Table data for the name KM ARAVIND KUMAR -->
+        </tr>
+        <tr class="LR">
+            <td>LR</td>
+            <!-- Table data for the abbreviation LR -->
+            <td>N LACHI RAM</td>
+            <!-- Table data for the name N LACHI RAM -->
+        </tr>
+        <tr class="VR">
+            <td>VR</td>
+            <!-- Table data for the abbreviation VR -->
+            <td>VIJAYA RAMALA</td>
+            <!-- Table data for the name VIJAYA RAMALA -->
+        </tr>
+        <tr class="enjoy">
+            <td>ENJOY</td>
+            <!-- Table data for the abbreviation ENJOY -->
+            <td>Enjoy Pandugo!</td>
+            <!-- Table data for the name Enjoy Pandugo! -->
+        </tr>
+    </table>
+    <!-- JavaScript for displaying the current date and time -->
+    <script>
+    function showDateTime() {
+    // Function to show the current date and time
+    const now = new Date();
+    // Create a new Date object
+    const day = String(now.getDate()).padStart(2, '0');
+    // Get the current day and pad it with leading zeros if necessary
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    // Get the current month and pad it with leading zeros if necessary
+    const year = now.getFullYear();
+    // Get the current year
+    const date = `${day}/${month}/${year}`;
+    // Format the date as DD/MM/YYYY
+    const weekday = now.toLocaleString('en-US', { weekday: 'long' });
+    // Get the current weekday as a string
+
+    let hours = now.getHours();
+    // Get the current hours
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    // Get the current minutes and pad it with leading zeros if necessary
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+    // Get the current seconds and pad it with leading zeros if necessary
+    const ampm = hours >= 12 ? 'PM' : 'AM';
+    // Determine if the current time is AM or PM
+    hours = hours % 12 || 12;
+    // Convert hours to 12-hour format
+
+    const time = `${hours}:${minutes}:${seconds} ${ampm}`;
+    // Format the time as HH:MM:SS AM/PM
+
+    const dateTimeElement = document.getElementById('dateTime');
+    // Get the element with the id 'dateTime'
+    if (dateTimeElement) {
+        // Check if the dateTimeElement exists
+        dateTimeElement.innerHTML = `<strong>Date:</strong> ${date} &nbsp; | &nbsp; 
+                                     <strong>Day:</strong> ${weekday} &nbsp; | &nbsp; 
+                                     <strong>Time:</strong> ${time}`;
+        // Set the innerHTML of the dateTimeElement to display the current date, day, and time
+    } else {
+        // If the dateTimeElement does not exist
+        console.error("Element with id 'dateTime' not found!");
+        // Log an error message to the console
+    }
+}
+
+// Call the showDateTime function to display the current date and time
+showDateTime();
+// Set an interval to update the date and time every 1000 milliseconds (1 second)
+setInterval(showDateTime, 1000);
+
+function highlightCurrentPeriod() {
+    // Function to highlight the current period in the timetable
+    const date = new Date();
+    // Create a new Date object
+    const current = date.getHours() * 60 + date.getMinutes();
+    // Calculate the current time in minutes
+    const day = date.getDay();
+    // Get the current day of the week (0-6, where 0 is Sunday)
+
+    const timeperiod = [
+        { start: 9 * 60 + 30, end: 11 * 60, class: 1 },
+        // Time period from 9:30 to 11:00
+        { start: 11 * 60, end: 11 * 60 + 45, class: 2 },
+        // Time period from 11:00 to 11:45
+        { start: 11 * 60 + 45, end: 12 * 60 + 30, class: 3 },
+        // Time period from 11:45 to 12:30
+        { start: 12 * 60 + 30, end: 13 * 60 + 15, class: 4 },
+        // Time period from 12:30 to 13:15
+        { start: 13 * 60 + 15, end: 13 * 60 + 45, class: "lunch" },
+        // Lunch time period from 13:15 to 13:45
+        { start: 13 * 60 + 45, end: 14 * 60 + 30, class: 5 },
+        // Time period from 13:45 to 14:30
+        { start: 14 * 60 + 30, end: 15 * 60 + 15, class: 6 },
+        // Time period from 14:30 to 15:15
+        { start: 15 * 60 + 15, end: 16 * 60, class: 7 },
+        // Time period from 15:15 to 16:00
+    ];
+
+    // Remove the highlight class from all table data cells
+    document.querySelectorAll('td').forEach(td => td.classList.remove('highlight'));
+    // Remove the lecturer-highlight class from all rows in the lecturers table
+    document.querySelectorAll('.lecturers tr').forEach(tr => tr.classList.remove('lecturer-highlight'));
+    // Remove the enjoy-highlight class from the 'enjoy' row in the lecturers table
+    document.querySelectorAll('.lecturers .enjoy').forEach(tr => tr.classList.remove('enjoy-highlight'));
+
+    if (day >= 1 && day <= 6) {
+        // Check if the current day is between Monday (1) and Saturday (6)
+        let prefix;
+        // Variable to hold the class prefix based on the current day
+        switch (day) {
+            case 1: prefix = "mclass"; break; // Monday
+            case 2: prefix = "tuclass"; break; // Tuesday
+            case 3: prefix = "wclass"; break; // Wednesday
+            case 4: prefix = "thclass"; break; // Thursday
+            case 5: prefix = "fclass"; break; // Friday
+            case 6: prefix = "sclass"; break; // Saturday
+        }
+
+        if (prefix) {
+            // Check if the prefix is defined
+            for (let i = 0; i < timeperiod.length; i++) {
+                // Iterate through the time periods
+                const slot = timeperiod[i];
+                // Get the current time slot
+                if (current >= slot.start && current < slot.end) {
+                    // Check if the current time falls within the time slot
+                    if (slot.class == "lunch") {
+                        // Check if the time slot is lunch
+                        document.querySelectorAll('.lunch').forEach(el => el.classList.add('lunchhighlight'));
+                        // Add the lunchhighlight class to all lunch cells
+                        document.querySelectorAll('.lecturers .enjoy').forEach(el => el.classList.add('enjoy-highlight'));
+                        // Add the enjoy-highlight class to the 'enjoy' row in the lecturers table
+                    } else {
+                        // If the time slot is not lunch
+                        document.querySelectorAll(`.${prefix}${slot.class}`).forEach(el => el.classList.add('highlight'));
+                        // Add the highlight class to the current period cells
+                        const className = document.querySelector(`.${prefix}${slot.class}`).innerText.match(/\((\w+)\)/)[1];
+                        // Extract the class name of the lecturer from the cell content
+                        document.querySelectorAll(`.${className}`).forEach(el => el.classList.add('lecturer-highlight'));
+                        
+                        // Add the lecturer-highlight class to the corresponding lecturer row in the lecturers table
+                        
+                    }
+                    break;
+                    // Exit the loop once the current period is found
+                }
+            }
+        }
+    }
+}
+
+// Call the highlightCurrentPeriod function to highlight the current period
+highlightCurrentPeriod();
+// Set an interval to update the highlighted period every 60000 milliseconds (1 minute)
+setInterval(highlightCurrentPeriod, 60000);
+
+</script>
+</body>
+</html>
